@@ -47,7 +47,7 @@ namespace Testing
 
         public void InsertProduct(Product productToInsert)
         {
-            _conn.Execute("INSERT INTO products (nameof, PRICE, CATEGORYID) VALUES (@name, @price, @categoryID);",
+            _conn.Execute("INSERT INTO products (NAME, PRICE, CATEGORYID) VALUES (@name, @price, @categoryID);",
                 new { name = productToInsert.Name, price = productToInsert.Price, categoryID = productToInsert.CategoryID });
         }
 
